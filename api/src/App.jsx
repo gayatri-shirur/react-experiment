@@ -11,7 +11,10 @@ function App() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => setProducts(data.products))
-      .catch((error) => console.error('Error fetching data:', error))
+      .catch(
+        (error) => {
+          console.error('Error fetching data:', error);
+        })
   }, [])
 
   return (
